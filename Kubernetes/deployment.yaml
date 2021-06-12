@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: stakater-backend
+  name: stakater-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stakater-backend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: stakater-backend
+    spec:
+      containers:
+      - image: stakater-backend:dev
+        env:
+        - name: DEMO_GREETING
+          value: "René Arturo Bareño Campos"
+        name: stakater-backend
+        resources: {}
+status: {}
