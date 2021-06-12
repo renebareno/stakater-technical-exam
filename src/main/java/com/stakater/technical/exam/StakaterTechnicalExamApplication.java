@@ -19,7 +19,7 @@ public class StakaterTechnicalExamApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://192.168.1.12:3000", "http://localhost:3000");
+				registry.addMapping("/**").allowedOrigins("http://stakater-front:3000", "http://localhost:3000");
 			}
 		};
 	}
